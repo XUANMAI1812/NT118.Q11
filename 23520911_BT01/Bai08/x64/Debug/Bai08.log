@@ -1,3 +1,0 @@
-﻿  Source.cpp
-C:\Users\furly\source\repos\23520911_BT01\Bai08\Source.cpp(56,12): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-  Bai08.vcxproj -> C:\Users\furly\source\repos\23520911_BT01\x64\Debug\Bai08.exe
