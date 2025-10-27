@@ -1,2 +1,2 @@
 # NT106.P11
-Đồ án Lập trình mạng căn bản (dự báo thời tiết)
+Lab phát triển ứng dụng trên thiết bị di động
