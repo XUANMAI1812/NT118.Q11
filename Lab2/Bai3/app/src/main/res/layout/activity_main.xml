@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:text="Quản lý nhân viên"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <TextView
+        android:id="@+id/tvMaNV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:text="Mã NV: "
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/edtMaNV"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintStart_toEndOf="@id/tvMaNV"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvTenNV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:text="Tên NV: "
+        app:layout_constraintTop_toBottomOf="@id/tvMaNV"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/edtTenNV"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/edtMaNV"
+        app:layout_constraintTop_toTopOf="@id/tvTenNV"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvTenNV"/>
+
+    <TextView
+        android:id="@+id/tvLoaiNV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Loại NV:"
+        app:layout_constraintStart_toStartOf="@id/tvTenNV"
+        app:layout_constraintTop_toBottomOf="@id/edtTenNV"/>
+
+    <RadioGroup
+        android:id="@+id/rgType"
+        android:layout_width="293dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="18dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@+id/tvLoaiNV"
+        app:layout_constraintTop_toBottomOf="@+id/edtTenNV">
+
+        <RadioButton
+            android:id="@+id/rd_chinhthuc"
+            android:layout_width="148dp"
+            android:layout_height="match_parent"
+            android:text="Chính thức" />
+
+        <RadioButton
+            android:id="@+id/rd_thoivu"
+            android:layout_width="149dp"
+            android:layout_height="match_parent"
+            android:text="Thời vụ"
+            app:layout_constraintStart_toEndOf="@+id/rd_chinhthuc" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnNhap"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Nhập NV"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/lightgray"
+        app:layout_constraintTop_toBottomOf="@+id/rgType"
+        app:layout_constraintStart_toStartOf="@id/edtTenNV"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loại NV:"
+        app:layout_constraintStart_toStartOf="@id/tvTenNV"
+        app:layout_constraintTop_toBottomOf="@id/btnNhap"/>
+
+
+    <TextView
+        android:id="@+id/tvHien"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        app:layout_constraintTop_toBottomOf="@id/btnNhap"/>
+
+    <ListView
+        android:id="@+id/lvHien"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHien" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

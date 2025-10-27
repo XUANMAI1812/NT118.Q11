@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:text="Name: "
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:ems="12"
+        android:contentDescription="ten mon an"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvName"
+        app:layout_constraintStart_toEndOf="@id/tvName"/>
+
+    <TextView
+        android:id="@+id/tvThumb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:text="Thumbnail"
+        app:layout_constraintStart_toStartOf="@id/tvName"
+        app:layout_constraintTop_toBottomOf="@id/tvName"/>
+
+    <Spinner
+        android:id="@+id/spnThumb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/edtName"
+        app:layout_constraintTop_toBottomOf="@id/edtName"
+        />
+
+    <TextView
+        android:id="@+id/tvPromo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:text="Promotion"
+        app:layout_constraintTop_toBottomOf="@id/tvThumb"
+        app:layout_constraintStart_toStartOf="@id/tvThumb"/>
+
+    <CheckBox
+        android:id="@+id/ckboxPromo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvPromo"
+        app:layout_constraintStart_toStartOf="@id/spnThumb"/>
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="ADD A NEW DISH"
+        app:layout_constraintTop_toBottomOf="@id/ckboxPromo"/>
+
+    <GridView
+        android:id="@+id/gvDish"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="23dp"
+        android:numColumns="2"
+        app:layout_constraintTop_toBottomOf="@id/btnAdd"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
